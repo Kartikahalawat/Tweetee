@@ -39,6 +39,14 @@ router.post("/", async (req, res, next) => {
 
         if(user == null){
             //No user found
+
+
+            var data= req.body;
+
+            User.create(data)
+            .then((user) => {
+                console.log(user);
+            })
         }
         else {
             //User found
