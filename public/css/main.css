@@ -6,6 +6,10 @@
     --blueLight: #b47beeb0;
 }
 
+* {
+    outline: none !important;
+}
+
 a {
     color: inherit;
 }
