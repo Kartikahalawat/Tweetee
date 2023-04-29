@@ -1,12 +1,12 @@
-$("postTextarea").keyup(event => {
+$("#postTextarea").keyup(event => {
     var textbox = $(event.target);
-    var value= textbox.val().trim();
+    var value = textbox.val().trim();
 
     var submitButton = $("#submitPostButton");
 
-    if(submitButton.length==0)  return alert("No submit button found");
+    if(submitButton.length == 0) return alert("No submit button found");
 
-    if(value =="") {
+    if (value == "") {
         submitButton.prop("disabled", true);
         return;
     }
@@ -14,7 +14,7 @@ $("postTextarea").keyup(event => {
     submitButton.prop("disabled", false);
 })
 
-$("#submitPostButton").click(()=> {
+$("#submitPostButton").click(() => {
     var button = $(event.target);
     var textbox = $("#postTextarea");
 
@@ -23,6 +23,6 @@ $("#submitPostButton").click(()=> {
     }
 
     $.post("/api/posts", data, (postData, status, xhr) => {
-        alert("postData");
+        alert(postData);
     })
 })
