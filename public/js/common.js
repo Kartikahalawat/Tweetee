@@ -19,10 +19,18 @@ $("#submitPostButton").click(() => {
     var textbox = $("#postTextarea");
 
     var data = {
-        //content: textbox.val()
+        content: textbox.val()
     }
 
-    $.post("/api/posts", data, (postData, status, xhr) => {
-        alert(postData);
+    $.post("/api/posts", data, postData => {
+
+        var html = createPostHtml(postData);
+        $(".postsContainer").prepend(html);
+        textbox.val("");
+        button.prop("disabled", true);
     })
 })
+
+function createPostHtml(postData){
+    return postData.content;
+}
