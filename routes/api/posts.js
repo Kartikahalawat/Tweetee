@@ -26,7 +26,7 @@ router.post("/", async (req, res, next) => {
     Post.create(postData)
     .then(async newPost => {
         newPost = await User.populate(newPost, {path: "postedBy"});
-        res.status(201).send(postData);
+        res.status(201).send(newPost);
     })
     .catch(error => {
         console.log(error);
