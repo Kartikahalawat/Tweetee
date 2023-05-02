@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const Schema= mongoose.Schema;
+const Schema = mongoose.Schema;
 
 const PostSchema = new Schema({
     content: { type: String, trim: true },
@@ -9,5 +9,5 @@ const PostSchema = new Schema({
     likes: [{ type: Schema.Types.ObjectId, ref: 'User' }]
 }, { timestamps: true });
 
-var Post =mongoose.model('Post', PostSchema);
-module.exports= Post;
+var Post = mongoose.model('Post', PostSchema);
+module.exports = Post;

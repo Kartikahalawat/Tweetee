@@ -6,6 +6,7 @@ block content
         form#registerForm(method="post", onsubmit="event.preventDefault(); validateForm();")
 
             p.errorMessage #{errorMessage}
+
             input(type="text", name="firstName", placeholder="First name", value=firstName required="")
             input(type="text", name="lastName", placeholder="Last name", value=lastName required="")
             input(type="text", name="username", placeholder="Username", value=username required="")
@@ -15,7 +16,7 @@ block content
             input(type="submit", value="Login")
 
         a(href="/login") Already have an account? Login here.
-
+    
     script.
         var passwordField = document.getElementById("password")
         var passwordConfirmField = document.getElementById("passwordConf")
