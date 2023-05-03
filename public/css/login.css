@@ -13,7 +13,7 @@ body {
     width: 80%;
     max-width: 500px;
     border: 1px solid #dedede;
-    background-color: white;
+    background-color: #fff;
     text-align: center;
     box-shadow: 0 1px 4px rgba(0,0,0,0.3);
     -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.3);
@@ -32,11 +32,11 @@ input[type="password"] {
     padding: 5px 10px;
     border-radius: 2px;
     border: 1px solid #dedede;
-    background-color: white;
+    background-color: #f2f2f2;
 }
 
-input[type="submit"]{
-    background-color: #9896F1;
+input[type="submit"] {
+    background-color: #0099ff;
     color: #fff;
     border: none;
     border-radius: 2px;
