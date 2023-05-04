@@ -1,13 +1,13 @@
 :root {
-    --blue: #1FA2F1;
-    --blueLight: #9BD1F9;
-    --blueBackground: rgba(212, 237, 255, 0.6);
+    --blue: #9896F1;
     --buttonHoverBg: #d4edff;
     --lightGrey: rgb(230, 236, 240);
-    --spacing: 15px;
+    --spacing: 50px;
+    --blueLight: #b47beeb0;
     --greyText: rgb(101, 119, 134);
     --greyButtonText: rgba(0,0,0,0.34);
-    --red: rgb(226,34,94);
+    --red: rgb(226, 34, 94);
+    --blueBackground: rgba(212, 237, 255, 0.6);
     --redBackground: rgba(226,34,94,0.1);
     --green: rgb(23,191,99);
     --greenBackground: rgba(23,191,99,0.1);
@@ -443,4 +443,53 @@ button span {
     background-color: var(--lightGrey);
     border: none;
     color: var(--greyText);
+}
+
+.chatPageContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.chatTitleBar {
+    border-bottom: 1px solid var(--lightGrey);
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    padding: 10px;
+}
+
+.chatTitleBar label {
+    margin: 0 10px 0 0;
+}
+
+#userSearchTextbox {
+    border: none;
+    flex: 1;
+    font-weight: 200;
+    min-width: 350px;
+}
+
+#createChatButton {
+    border: none;
+    background-color: var(--blue);
+    color: #fff;
+    padding: 7px 20px;
+    margin: 10px auto;
+    border-radius: 40px;
+}
+
+#createChatButton:disabled {
+    background-color: var(--lightGrey);
+    color: var(--greyText);
+}
+
+.selectedUser {
+    font-weight: 300;
+    background-color: #CBE5FE;
+    color: #0084ff;
+    padding: 5px;
+    border-radius: 3px;
+    margin: 5px 5px 0 0;
+    display: inline-block;
 }
