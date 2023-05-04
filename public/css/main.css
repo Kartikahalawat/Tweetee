@@ -1,13 +1,13 @@
 :root {
-    --blue: #9896F1;
+    --blue: #1FA2F1;
+    --blueLight: #9BD1F9;
+    --blueBackground: rgba(212, 237, 255, 0.6);
     --buttonHoverBg: #d4edff;
     --lightGrey: rgb(230, 236, 240);
-    --spacing: 50px;
-    --blueLight: #b47beeb0;
+    --spacing: 15px;
     --greyText: rgb(101, 119, 134);
     --greyButtonText: rgba(0,0,0,0.34);
-    --red: rgb(226, 34, 94);
-    --blueBackground: rgba(212, 237, 255, 0.6);
+    --red: rgb(226,34,94);
     --redBackground: rgba(226,34,94,0.1);
     --green: rgb(23,191,99);
     --greenBackground: rgba(23,191,99,0.1);
@@ -408,4 +408,17 @@ button span {
  
     /* This rule is very important, please don't ignore this */
     max-width: 100%;
+}
+
+.pinButton.active {
+    color: var(--blue);
+}
+
+.pinnedPostText {
+    font-size: 12px;
+    color: var(--greyText);
+}
+
+.pinnedPostContainer {
+    border-bottom: 10px solid rgb(230,236,240);
 }
